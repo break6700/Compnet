@@ -93,3 +93,5 @@ https://support.discordapp.com/hc/en-us/articles/210298617-Markdown-Text-101-Cha
 https://gist.github.com/Almeeida/41a664d8d5f3a8855591c2f1e0e07b19 - Discord Syntax Hylighting
 https://nodejs.org/api/fs.html - NodeJS file system man page
 https://discordapp.com/developers/docs/resources/channel#embed-limits - Embeds
+https://discord.js.org/#/docs/main/stable/examples/embed - FUCKING YES M8!
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/floor - Dice roller
