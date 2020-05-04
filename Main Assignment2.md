@@ -34,7 +34,7 @@ Discord Bot for generating dice rolls and useful DM information.
 
 Why NodeJS? - Python Discord.py
 
-
+Checking documents branch works
 
 - Level of programming languages, interfaces well with Discord
 
