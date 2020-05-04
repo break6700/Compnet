@@ -46,6 +46,8 @@ Markdown VS Embeds - Why embeds
 
 ## Code Breakdown
 
+Hidden Code = config.json
+
 Using a command handeler rather than a if/else
 
 Use "regex" to solve bug where spaces are filled with commas during arguments

@@ -1,40 +1,32 @@
-'use strict';
-
-/**
- * An example of how you can send embeds
- */
-
-// Extract the required classes from the discord.js module
-const { Client, MessageEmbed } = require('discord.js');
+// Example for embeded message responses: https://discord.js.org/#/docs/main/stable/examples/embed
 
 
-// Create an instance of a Discord client
-const client = new Client();
-
-/**
- * The ready event is vital, it means that only _after_ this will your bot start reacting to information
- * received from Discord
- */
-
-client.on('message', message => {
-  // If the message is "how to embed"
-  if (message.content === '!blinded') {
-    // We can create embeds using the MessageEmbed constructor
-    // Read more about all that you can do with the constructor
-    // over at https://discord.js.org/#/docs/main/master/class/MessageEmbed
-    const embed = new MessageEmbed()
-    .setColor('#FF0000') // Set color: Blue
-    .setTitle('Blinded')
-    .setURL('https://roll20.net/compendium/dnd5e/Conditions#toc_1')
-    .setAuthor('D&D Helper BOT')
-    .setDescription('***TYPE : *** CONDITIONS')
-    .setThumbnail('https://3.bp.blogspot.com/-YBp6pweGM8c/U4LFs_8f9aI/AAAAAAAAPjA/tMsal7KYFxs/s1600/NEW+Ampersand+Logo.png')
-    .addFields(
-      { name: 'DETAILS', value: '***+*** A blinded creature can’t see and __automatically fails__ any ability check that requires sight. \n ***+*** Attack rolls against the creature have __advantage__, and the creature’s Attack rolls have __disadvantage__.'},
-    )
-    message.channel.send(embed);
-  }
-});
-
-// Log our bot in using the token from https://discordapp.com/developers/applications/me
-client.login('FILL ME BEFORE USE');
+// const { Client, MessageEmbed } = require('discord.js');
+// const client = new Client();
+//
+//
+// client.on('message', message => {
+//   if (message.content === 'test') {
+//
+//     const embed = new MessageEmbed()
+//     .setColor('#0099ff')
+//     .setTitle('Some title')
+//     .setURL('https://discord.js.org/')
+//     .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+//     .setDescription('Some description here')
+//     .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+//     .addFields(
+//       { name: 'Regular field title', value: 'Some value here' },
+//       { name: '\u200B', value: '\u200B' },
+//       { name: 'Inline field title', value: 'Some value here', inline: true },
+//       { name: 'Inline field title', value: 'Some value here', inline: true },
+//     )
+//     .addField('Inline field title', 'Some value here', true)
+//     .setImage('https://i.imgur.com/wSTFkRM.png')
+//     .setTimestamp()
+//     .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+//     message.channel.send(embed);
+//   }
+// });
+//
+// client.login('ENTER TOKEN');

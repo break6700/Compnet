@@ -1,3 +1,8 @@
+// Reloader = Reload commands used for testing.
+// Used to avoid restarting BOT everytime you change somthing.
+// COPIED DIRECTLY: https://discordjs.guide/command-handling/adding-features.html#reloading-commands
+
+
 module.exports = {
 	name: 'reload',
 	description: 'Reloads a command',
