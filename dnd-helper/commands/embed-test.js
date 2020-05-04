@@ -1,26 +1,32 @@
+// Example for embeded message responses: https://discord.js.org/#/docs/main/stable/examples/embed
+
+
+// const { Client, MessageEmbed } = require('discord.js');
+// const client = new Client();
 //
-const Discord = require('discord.js');
-const {MessageEmbed} = require('discord.js')
-// module.exports={
-//   name:'embed',
-//   category: 'commands',
-//   timeout: 5000,
-//   description: 'Testing embed discord function',
-//   run:async(bot, message, args)=>{
+//
+// client.on('message', message => {
+//   if (message.content === 'test') {
+//
 //     const embed = new MessageEmbed()
-//       .setTitle('Example Embed')
-//       .setColor('RANDOM')
-//       .setURL('https://www.youtube.com/watch?v=HJa8Bmi5gks')
-//       .setAuthor('Name', 'https://www.underconsideration.com/brandnew/archives/dungeons_and_dragons_40_ampersand_flat.png')
-//       .setDescription('This is a description')
-//       message.channel.send(embed)
+//     .setColor('#0099ff')
+//     .setTitle('Some title')
+//     .setURL('https://discord.js.org/')
+//     .setAuthor('Some name', 'https://i.imgur.com/wSTFkRM.png', 'https://discord.js.org')
+//     .setDescription('Some description here')
+//     .setThumbnail('https://i.imgur.com/wSTFkRM.png')
+//     .addFields(
+//       { name: 'Regular field title', value: 'Some value here' },
+//       { name: '\u200B', value: '\u200B' },
+//       { name: 'Inline field title', value: 'Some value here', inline: true },
+//       { name: 'Inline field title', value: 'Some value here', inline: true },
+//     )
+//     .addField('Inline field title', 'Some value here', true)
+//     .setImage('https://i.imgur.com/wSTFkRM.png')
+//     .setTimestamp()
+//     .setFooter('Some footer text here', 'https://i.imgur.com/wSTFkRM.png');
+//     message.channel.send(embed);
 //   }
-// }
-
-
-const exampleEmbed = new Discord.MessageEmbed()
-	.setTitle('Some title')
-	.attachFiles(['../assets/discordjs.png'])
-	.setImage('attachment://discordjs.png');
-
-channel.send(exampleEmbed);
+// });
+//
+// client.login('ENTER TOKEN');
