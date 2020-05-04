@@ -25,11 +25,12 @@ client.once('ready', () => {
 	console.log('Ready to Roll!');
 });
 
-
+// If the message doesn't start with a prefix '!' or was created by a bot exit.
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
-
+	// Create argument that removes prefix and turns it into an array by splitting
 	const args = message.content.slice(prefix.length).split(/ +/);
+	// Create command variable, first array and remove original array 
 	const command = args.shift().toLowerCase();
 
 	if (!client.commands.has(command)) return;
