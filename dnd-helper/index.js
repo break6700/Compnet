@@ -11,6 +11,11 @@ const { prefix, token } = require('./config.json');
 const client = new Discord.Client();
 client.commands = new Discord.Collection();
 
+// After Client is launched. Message 'Ready to Roll' in terminal
+client.once('ready', () => {
+	console.log('Ready to Roll!');
+});
+
 // Create constant 'commandFiles' and use fs library to search for commands with JS extenstions in .commands/ folder.
 const commandFiles = fs.readdirSync('./commands/').filter(file => file.endsWith('.js'));
 
@@ -20,17 +25,12 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-// After Client is launched. Message 'Ready to Roll' in terminal
-client.once('ready', () => {
-	console.log('Ready to Roll!');
-});
-
 // If the message doesn't start with a prefix '!' or was created by a bot exit.
 client.on('message', message => {
 	if (!message.content.startsWith(prefix) || message.author.bot) return;
 	// Create argument that removes prefix and turns it into an array by splitting
 	const args = message.content.slice(prefix.length).split(/ +/);
-	// Create command variable, first array and remove original array 
+	// Create command variable, first array and remove original array
 	const command = args.shift().toLowerCase();
 
 	if (!client.commands.has(command)) return;
@@ -43,6 +43,7 @@ client.on('message', message => {
 		message.reply('there was an error trying to execute that command!');
 	}
 });
+
 
 // Call 'token' from config.json to be authenticated by Discord
 client.login(token);
